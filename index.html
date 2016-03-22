@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Objectifying Myself</title>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			var notLike = {
+				"animals": ["spiders", "idiot birds", "mean cats"],
+				"smells": ["cherry", "fake watermelon", "uncle farts"]
+			}
+
+			var me = {
+				"first": "Gavin",
+				"last": "Kaplan",
+				"hair": "Bad",
+				"notLike": notLike,
+				"breath": "Smelly when I wake up",
+				"weakness": ["Fire", "Bullets", "Cilantro"],
+				"animal": "The Majestic Sweet Potato"
+			}
+
+
+
+			$(document).ready(function(){
+				$("h1").text("My name is " + me["first"] + " " + me["last"] + ".");
+				for(i=0; i<me.notLike["animals"].length; i++){
+					var x = me.notLike["animals"][i];
+					$("h2").append("An animal I don't really like is " + x + ".\n");
+				}
+				for(i=0; i<me.notLike["smells"].length; i++){
+					var x = me.notLike["smells"][i];
+					$("h2").append("A smell I don't really like is " + x + ".");
+				}
+      		});
+		</script>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<h1></h1>
+		<h2></h2>
+		
+	</body>
+</html>
